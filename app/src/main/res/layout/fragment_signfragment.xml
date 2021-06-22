@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.signfragment">
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="12dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/actor"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="32dp">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_weight="1.1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileimage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/noimage"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp">
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:fabSize="mini"
+                android:layout_alignTop="@id/profileimage"
+                android:src="@drawable/editimage"
+                android:layout_alignEnd="@+id/profileimage"
+                android:layout_marginBottom="100dp"
+                android:id="@+id/floatingActionButton">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </RelativeLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="16dp"
+            android:hint="Name"
+            app:boxBackgroundColor="@color/cardview_light_background"
+            android:background="#FFFFFF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:inputType="text"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="16dp"
+            android:hint="Email"
+            app:boxBackgroundColor="@color/cardview_light_background"
+            android:background="#FFFFFF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="16dp"
+            app:passwordToggleEnabled="true"
+            android:hint="Password"
+            app:boxBackgroundColor="@color/cardview_light_background"
+            android:background="#FFFFFF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+
+
+                android:inputType="textPassword"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="16dp"
+            android:hint="Confirm Password"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="@color/cardview_light_background"
+            android:background="#FFFFFF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+
+
+                android:inputType="textPassword"
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:text="Register"
+            android:layout_margin="16dp"
+            app:cornerRadius="12dp"
+            android:id="@+id/register"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.core.widget.NestedScrollView>
