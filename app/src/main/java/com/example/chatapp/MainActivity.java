@@ -2,18 +2,16 @@ package com.example.chatapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.chatapp.adapters.viewadapterlogin;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,15 +28,18 @@ public class MainActivity extends AppCompatActivity {
         if (tabLayout.getSelectedTabPosition()==1){
             tabLayout.selectTab(tabLayout.getTabAt(0));
         }
-        else
+        else{
         super.onBackPressed();
+        finishAffinity();
+        }
 
     }
     @Override
     protected void onStart() {
         super.onStart();
         if (mauth.getCurrentUser()!=null){
-            Toast.makeText(this,"yes", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Already logged in", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this,dashboard.class));
         }
     }
 

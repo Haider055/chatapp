@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.chatapp.R;
 import com.example.chatapp.dashboard;
@@ -53,6 +54,9 @@ public class loginfragment extends Fragment {
                     public void onComplete(Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             startActivity(new Intent(getContext(), dashboard.class));
+                        }
+                        else {
+                            Toast.makeText(getContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
